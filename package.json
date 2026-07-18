@@ -1,0 +1,55 @@
+{
+  "name": "@openvecta/mcp",
+  "version": "0.1.0",
+  "description": "MCP server for OpenVecta — call OpenVecta inference models (OpenAI-compatible, USDC per call) as tools from any MCP client.",
+  "type": "module",
+  "bin": {
+    "openvecta-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openvecta/mcp.git"
+  },
+  "homepage": "https://github.com/openvecta/mcp#readme",
+  "bugs": {
+    "url": "https://github.com/openvecta/mcp/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openvecta",
+    "llm",
+    "inference",
+    "openai-compatible",
+    "solana",
+    "x402"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@x402/fetch": "^2.0.0",
+    "@x402/svm": "^2.0.0",
+    "@solana/kit": "^5.1.0",
+    "bs58": "^6.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.5.4"
+  },
+  "author": "OpenVecta"
+}
